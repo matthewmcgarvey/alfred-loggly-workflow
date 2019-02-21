@@ -3,14 +3,37 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.matthewmcg.loggly</string>
+	<string></string>
 	<key>connections</key>
 	<dict>
-		<key>7C321AC5-3A29-42BE-994A-F23820B0C82E</key>
+		<key>EC22CE0F-3F3A-4FA7-8A17-83B1A9B2C729</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>BD5C574C-BB17-4000-A88F-E7EC2666E883</string>
+				<string>F7E06437-96E8-4AE7-82A4-237FD0B7403F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F32B16BE-138F-4523-960F-775878AA1D76</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>030C3351-6A40-48BC-893C-88EF920CD3C9</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Delete...</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>EC22CE0F-3F3A-4FA7-8A17-83B1A9B2C729</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -21,35 +44,84 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Matthew McGarvey</string>
+	<string></string>
 	<key>description</key>
 	<string></string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Loggly</string>
+	<string>loggly</string>
 	<key>objects</key>
 	<array>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python loggly.py --delete {query}</string>
+				<key>scriptargtype</key>
 				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>030C3351-6A40-48BC-893C-88EF920CD3C9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
 				<key>keyword</key>
-				<string>log</string>
+				<string>loggly</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Unfortunately this is a slow operation so be patient...</string>
+				<key>script</key>
+				<string>python loggly.py {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string></string>
-				<key>text</key>
-				<string>Search Loggly</string>
+				<key>title</key>
+				<string>Check It Out</string>
+				<key>type</key>
+				<integer>0</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>7C321AC5-3A29-42BE-994A-F23820B0C82E</string>
+			<string>F32B16BE-138F-4523-960F-775878AA1D76</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -66,28 +138,65 @@
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>BD5C574C-BB17-4000-A88F-E7EC2666E883</string>
+			<string>F7E06437-96E8-4AE7-82A4-237FD0B7403F</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python loggly.py --goto {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EC22CE0F-3F3A-4FA7-8A17-83B1A9B2C729</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>7C321AC5-3A29-42BE-994A-F23820B0C82E</key>
+		<key>030C3351-6A40-48BC-893C-88EF920CD3C9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>50</integer>
+			<integer>470</integer>
 			<key>ypos</key>
 			<integer>50</integer>
 		</dict>
-		<key>BD5C574C-BB17-4000-A88F-E7EC2666E883</key>
+		<key>EC22CE0F-3F3A-4FA7-8A17-83B1A9B2C729</key>
 		<dict>
 			<key>xpos</key>
-			<integer>270</integer>
+			<integer>480</integer>
 			<key>ypos</key>
-			<integer>50</integer>
+			<integer>340</integer>
+		</dict>
+		<key>F32B16BE-138F-4523-960F-775878AA1D76</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+		<key>F7E06437-96E8-4AE7-82A4-237FD0B7403F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<integer>130</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
