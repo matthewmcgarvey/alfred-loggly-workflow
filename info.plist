@@ -131,7 +131,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://lampo.loggly.com/search#terms={query}</string>
+				<string>https://lampo.loggly.com/search#terms={query}&amp;from=-1h&amp;until=now</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
